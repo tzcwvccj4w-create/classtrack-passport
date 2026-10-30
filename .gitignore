@@ -18,6 +18,14 @@ __pycache__/
 # The generated LVGL font source is tracked; keep the 16 MB source OTF local.
 /assets/fonts/SourceHanSansSC-Normal.otf
 
+# Large upstream showcase images are not required by ClassTrack firmware.
+/assets/images/home.jpg
+/assets/images/logo.png
+/assets/images/readme-hardware-specs.png
+/docs/brand/ai-passport-front-eva-00.png
+/docs/brand/ai-passport-front-eva-01.png
+/docs/brand/ai-passport-front-eva-02.png
+
 # Generated repository-local links; canonical skill sources live in skills/.
 /.agents/skills/passport-develop
 /.agents/skills/passport-setup

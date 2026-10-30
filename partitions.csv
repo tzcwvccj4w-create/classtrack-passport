@@ -1,0 +1,6 @@
+# ClassTrack 8 MB layout. The audio partition contains two transactional banks.
+# Name,      Type, SubType, Offset,   Size,     Flags
+nvs,         data, nvs,     0x9000,   0x6000,
+phy_init,    data, phy,     0xf000,   0x1000,
+factory,     app,  factory, 0x10000,  0x2f0000,
+classdata,   data, 0x40,    0x300000, 0x4f0000,

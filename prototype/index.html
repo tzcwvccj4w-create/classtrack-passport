@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClassTrack · AI Passport 原型</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="stage">
+    <section class="device" aria-label="FoloToy AI Passport 交互模拟器">
+      <div class="speaker" aria-hidden="true"></div>
+      <div id="screen" class="screen" data-screen="home">
+        <header class="statusbar" aria-label="设备状态">
+          <span class="clock"><strong id="statusDate">2026年10月27日</strong><span id="statusTime">00:00</span></span>
+          <span class="battery" aria-label="电量 94%"><i></i>94%</span>
+        </header>
+        <section id="viewport" class="viewport" aria-live="polite"></section>
+        <footer id="keyHint" class="key-hint">▲▼ 选择　OK 进入</footer>
+      </div>
+      <nav class="hardware-keys" aria-label="实体按键">
+        <button type="button" data-key="up" aria-label="上">▲</button>
+        <button type="button" data-key="ok" class="ok" aria-label="确定">OK</button>
+        <button type="button" data-key="down" aria-label="下">▼</button>
+      </nav>
+      <div class="device-label">AI PASSPORT · INPUT SIMULATOR</div>
+    </section>
+
+    <aside class="instructions">
+      <h1>ClassTrack（课到哪了？）V1.1</h1>
+      <p>鼠标点击或键盘操作：<kbd>↑</kbd> <kbd>↓</kbd> 移动，<kbd>Enter</kbd> 确认；在班级页按一次 Enter 开始录音，再按一次结束。</p>
+      <p class="note">设备屏幕内容区严格按 240 × 320 像素渲染。模拟说明已移出按钮区，保存前试听页底部保留独立安全区。</p>
+      <div class="dev-controls" aria-label="原型辅助操作">
+        <button type="button" id="resetDemo">模拟重启</button>
+        <button type="button" id="syncClock">Mac 校时</button>
+        <button type="button" id="importClasses">导入示例班级</button>
+      </div>
+    </aside>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4efe5">
+  <meta name="description" content="ClassTrack（课到哪了？）是一款运行在 FoloToy AI Passport 上的离线教学进度记录器。">
+  <meta property="og:title" content="ClassTrack · 课到哪了？">
+  <meta property="og:description" content="每班一条 20 秒内录音，离线保存，打开就能听。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/screen-home.png">
+  <title>ClassTrack · 课到哪了？</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ClassTrack","alternateName":"课到哪了？","applicationCategory":"EducationalApplication","operatingSystem":"FoloToy AI Passport / macOS","license":"https://opensource.org/license/mit","codeRepository":"https://github.com/tzcwvccj4w-create/classtrack-passport"}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header" data-header>
+    <a class="brand" href="#top" aria-label="ClassTrack 首页">
+      <span class="brand-mark" aria-hidden="true">CT</span>
+      <span>CLASS<span>TRACK</span></span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      <a href="#workflow"><span class="zh">使用方法</span><span class="en">How it works</span></a>
+      <a href="#manager"><span class="zh">Mac 工具</span><span class="en">Mac app</span></a>
+      <a href="#architecture"><span class="zh">技术设计</span><span class="en">Design</span></a>
+      <a href="#status"><span class="zh">项目状态</span><span class="en">Status</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="language-switch" type="button" data-language-toggle aria-label="Switch to English">EN</button>
+      <a class="github-link" href="https://github.com/tzcwvccj4w-create/classtrack-passport" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy reveal">
+        <div class="eyebrow"><span class="dot"></span><span class="zh">完全离线 · 为教师而做</span><span class="en">Offline by design · Made for teachers</span></div>
+        <h1>
+          <span class="zh">下课后，<br><em>20 秒</em>记住课到哪了。</span>
+          <span class="en">Remember where class stopped<br>in <em>20 seconds</em>.</span>
+        </h1>
+        <p class="lede zh">ClassTrack（课到哪了？）让 FoloToy AI Passport 变成一枚随身的教学进度记录器。选择班级、录一句话、试听后保存——每班只保留最新一条。</p>
+        <p class="lede en">ClassTrack turns a FoloToy AI Passport into a pocket teaching-progress recorder. Pick a class, record one short note, review it, and save—one latest recording per class.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#workflow"><span class="zh">看看怎么用</span><span class="en">See how it works</span></a>
+          <a class="button secondary" href="downloads/ClassTrack-Manager-macOS.dmg" download><span class="zh">下载 Mac 工具</span><span class="en">Download Mac app</span></a>
+        </div>
+        <ul class="hero-facts" aria-label="核心特性">
+          <li><strong>12</strong><span class="zh">最多班级</span><span class="en">classes max</span></li>
+          <li><strong>20s</strong><span class="zh">单条上限</span><span class="en">per note</span></li>
+          <li><strong>0</strong><span class="zh">云端依赖</span><span class="en">cloud services</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-visual reveal" aria-label="ClassTrack 设备界面预览">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <figure class="screen-card screen-card-main">
+          <img src="assets/screen-home.png" alt="ClassTrack 班级选择首页" width="480" height="640">
+        </figure>
+        <figure class="screen-card screen-card-back">
+          <img src="assets/screen-recording.png" alt="ClassTrack 正在录音界面" width="480" height="640">
+        </figure>
+        <span class="visual-note note-one"><span class="pulse"></span><span class="zh">流式 ADPCM</span><span class="en">Streaming ADPCM</span></span>
+        <span class="visual-note note-two"><span class="zh">断电保留旧录音</span><span class="en">Power-loss safe</span></span>
+      </div>
+    </section>
+
+    <section class="problem-section section-shell">
+      <div class="section-number">01</div>
+      <div class="problem-copy reveal">
+        <p class="kicker zh">一个小但反复出现的教学问题</p>
+        <p class="kicker en">A small problem that repeats every teaching day</p>
+        <h2 class="zh">教案记录了计划，<br>却未必记得住<em>实际讲到哪里</em>。</h2>
+        <h2 class="en">Lesson plans record intent,<br>not always <em>where class actually stopped</em>.</h2>
+      </div>
+      <div class="problem-note reveal">
+        <p class="zh">多个班级并行、进度不同，下次上课前才发现自己忘了。ClassTrack 不做复杂系统，只把下课后的那句话留下来。</p>
+        <p class="en">Classes move at different speeds. ClassTrack avoids another complex system and simply preserves the one sentence you need before the next lesson.</p>
+      </div>
+    </section>
+
+    <section class="workflow section-shell" id="workflow">
+      <div class="section-heading reveal">
+        <div>
+          <p class="kicker zh">三枚按键，一条路径</p>
+          <p class="kicker en">Three buttons, one clear path</p>
+          <h2><span class="zh">录完就走，不要把下课变成整理会。</span><span class="en">Record it and leave. No post-class admin ritual.</span></h2>
+        </div>
+        <p class="section-intro zh">上、下选择，OK 确认。每一步都在 240×320 屏幕的安全区内完成。</p>
+        <p class="section-intro en">Up and down to select, OK to confirm. Every step fits the 240×320 display safe area.</p>
+      </div>
+
+      <ol class="steps reveal">
+        <li>
+          <span class="step-index">01</span>
+          <div class="step-icon" aria-hidden="true">▲▼</div>
+          <h3><span class="zh">选择班级</span><span class="en">Choose a class</span></h3>
+          <p class="zh">首页直接看到已记录和未记录状态。</p>
+          <p class="en">See recorded and unrecorded status directly on the home screen.</p>
+        </li>
+        <li>
+          <span class="step-index">02</span>
+          <div class="step-icon record-icon" aria-hidden="true"></div>
+          <h3><span class="zh">录不超过 20 秒</span><span class="en">Record up to 20 seconds</span></h3>
+          <p class="zh">按 OK 开始，再按一次结束，页面显示实时计时。</p>
+          <p class="en">Press OK to start and again to stop, with a live timer on screen.</p>
+        </li>
+        <li>
+          <span class="step-index">03</span>
+          <div class="step-icon" aria-hidden="true">▶</div>
+          <h3><span class="zh">试听再保存</span><span class="en">Review, then save</span></h3>
+          <p class="zh">可试听、确认、重录或放弃；确认前旧录音一直保留。</p>
+          <p class="en">Play, confirm, re-record, or discard. The old note stays safe until commit.</p>
+        </li>
+        <li>
+          <span class="step-index">04</span>
+          <div class="step-icon" aria-hidden="true">✓</div>
+          <h3><span class="zh">下次打开就能听</span><span class="en">Ready for the next lesson</span></h3>
+          <p class="zh">保存时间戳，并可从“最近更新”按时间查看。</p>
+          <p class="en">A timestamp is stored and recent updates are sorted by time.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="screens-section" aria-labelledby="screens-title">
+      <div class="screens-copy section-shell reveal">
+        <p class="kicker zh">真正的 240×320 尺寸</p>
+        <p class="kicker en">Designed at the real 240×320 size</p>
+        <h2 id="screens-title"><span class="zh">没有缩小的桌面窗口，<br>每一页都是设备本身。</span><span class="en">Not a desktop mockup scaled down.<br>Every page is the device itself.</span></h2>
+        <p class="zh">七个页面已经通过安全区、中文字形、溢出和元素交叠自动检查。</p>
+        <p class="en">Seven screens are automatically checked for safe areas, Chinese glyph coverage, overflow, and element overlap.</p>
+      </div>
+      <div class="screen-rail" data-screen-rail>
+        <figure><img src="assets/screen-home.png" alt="首页班级列表" width="480" height="640"><figcaption><span class="zh">班级首页</span><span class="en">Class home</span></figcaption></figure>
+        <figure><img src="assets/screen-recording.png" alt="录音计时页面" width="480" height="640"><figcaption><span class="zh">录音计时</span><span class="en">Live recording</span></figcaption></figure>
+        <figure><img src="assets/screen-review.png" alt="保存前试听页面" width="480" height="640"><figcaption><span class="zh">保存前试听</span><span class="en">Review before saving</span></figcaption></figure>
+        <figure><img src="assets/screen-recent.png" alt="最近更新列表" width="480" height="640"><figcaption><span class="zh">最近更新</span><span class="en">Recent updates</span></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="manager section-shell" id="manager">
+      <div class="manager-card reveal">
+        <div class="manager-window" aria-label="ClassTrack Mac 管理工具界面示意">
+          <div class="window-bar"><span></span><span></span><span></span><b>ClassTrack 管理工具</b></div>
+          <div class="window-body">
+            <div class="connection-row"><span class="status-light"></span><div><strong>AI Passport</strong><small>/dev/cu.usbmodem</small></div><button type="button" tabindex="-1">刷新设备</button></div>
+            <div class="manager-actions"><button type="button" tabindex="-1">同步 Mac 当前时间</button><button type="button" tabindex="-1">上传课表到设备</button></div>
+            <div class="class-preview">
+              <span>26机电2班 <b>高职英语</b></span><span>26机电3班 <b>高职英语</b></span><span>26语言1班 <b>汉语听力</b></span><span>+ 3 个班级</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="manager-copy reveal">
+        <p class="kicker zh">需要时打开，用完就退出</p>
+        <p class="kicker en">Open it when needed, quit when done</p>
+        <h2><span class="zh">对时和上传课表，<br>都在一个 Mac 小工具里。</span><span class="en">Time sync and class upload,<br>in one small Mac app.</span></h2>
+        <p class="zh">原生 macOS 前台应用，不安装登录项、不创建后台服务、不联网。关闭最后一个窗口后，进程立即退出。</p>
+        <p class="en">A foreground-only native macOS app. No login item, no background service, no network. Close the last window and the process exits.</p>
+        <ol class="compact-steps">
+          <li><span>1</span><div><strong class="zh">连接并唤醒设备</strong><strong class="en">Connect and wake the device</strong><small class="zh">用支持数据的 USB 线连接 Mac。</small><small class="en">Use a data-capable USB cable.</small></div></li>
+          <li><span>2</span><div><strong class="zh">点击刷新</strong><strong class="en">Refresh devices</strong><small class="zh">在列表中选择 AI Passport。</small><small class="en">Select the AI Passport from the list.</small></div></li>
+          <li><span>3</span><div><strong class="zh">校时或上传 CSV</strong><strong class="en">Sync or upload CSV</strong><small class="zh">完成后可直接关闭应用。</small><small class="en">Close the app when finished.</small></div></li>
+        </ol>
+        <a class="button primary" href="downloads/ClassTrack-Manager-macOS.dmg" download><span class="zh">下载 macOS DMG</span><span class="en">Download macOS DMG</span></a>
+        <p class="compat-note zh">当前构建：Apple Silicon（arm64）。首次打开如被 macOS 拦截，请在 Finder 中按住 Control 点击应用，选择“打开”。</p>
+        <p class="compat-note en">Current build: Apple Silicon (arm64). If macOS blocks the first launch, Control-click the app in Finder and choose Open.</p>
+      </div>
+    </section>
+
+    <section class="csv-section section-shell">
+      <div class="csv-copy reveal">
+        <p class="kicker zh">课表就是一张简单表格</p>
+        <p class="kicker en">The class list is just a small table</p>
+        <h2><span class="zh">只保留班级和课程，<br>不需要整张教务课表。</span><span class="en">Keep only class and course.<br>No timetable system required.</span></h2>
+        <p class="zh">CSV 必须使用 UTF-8，表头为 <code>id,name,course</code>，ID 从 0 到 11 且不可重复。</p>
+        <p class="en">Use UTF-8 CSV with the exact <code>id,name,course</code> header. IDs run from 0 to 11 and must be unique.</p>
+      </div>
+      <div class="code-card reveal">
+        <div class="code-title"><span>classes.csv</span><button type="button" data-copy-csv><span class="zh">复制</span><span class="en">Copy</span></button></div>
+        <pre><code data-csv>id,name,course
+0,26机电2班,高职英语
+1,26机电3班,高职英语
+2,26学历1班,汉语听力
+3,26语言1班,汉语听力</code></pre>
+        <p><span class="zh">导入前会检查长度、重复 ID、字符编码和设备字形覆盖。</span><span class="en">Import validates length, duplicate IDs, UTF-8, and on-device glyph coverage.</span></p>
+      </div>
+    </section>
+
+    <section class="architecture" id="architecture">
+      <div class="section-shell">
+        <div class="section-heading light reveal">
+          <div>
+            <p class="kicker zh">为 8 MB Flash 而做的取舍</p>
+            <p class="kicker en">Deliberate choices for 8 MB of Flash</p>
+            <h2><span class="zh">离线不是断网后将就，<br>而是从存储到交互的前提。</span><span class="en">Offline is not a fallback.<br>It shapes storage, audio, and interaction.</span></h2>
+          </div>
+          <p class="section-intro zh">目标硬件：ESP32-C3、8 MB Flash、无 PSRAM、ST7789P3、ES8311 与三枚 ADC 按键。</p>
+          <p class="section-intro en">Target hardware: ESP32-C3, 8 MB Flash, no PSRAM, ST7789P3, ES8311, and three ADC buttons.</p>
+        </div>
+        <div class="architecture-grid reveal">
+          <article><span class="arch-number">16 kHz</span><h3><span class="zh">流式 IMA ADPCM</span><span class="en">Streaming IMA ADPCM</span></h3><p class="zh">小块编解码，不申请 20 秒 PCM 大缓冲。</p><p class="en">Block-by-block encoding without a 20-second PCM buffer.</p></article>
+          <article><span class="arch-number">2 banks</span><h3><span class="zh">原子替换事务</span><span class="en">Atomic replacement</span></h3><p class="zh">最终提交标记写入前，新录音不可见。</p><p class="en">A new recording stays invisible until its final commit marker.</p></article>
+          <article><span class="arch-number">CRC32</span><h3><span class="zh">完整性检查</span><span class="en">Integrity checks</span></h3><p class="zh">录音、CSV 与 USB 传输都在使用前校验。</p><p class="en">Audio, CSV, and USB payloads are validated before use.</p></article>
+          <article><span class="arch-number">30 s</span><h3><span class="zh">可控的低功耗</span><span class="en">Controlled low power</span></h3><p class="zh">空闲后按顺序停止音频、屏幕与总线，再进入深睡。</p><p class="en">Audio, display, and buses stop in order before deep sleep.</p></article>
+        </div>
+        <a class="text-link light-link" href="https://github.com/tzcwvccj4w-create/classtrack-passport/blob/main/docs/class-track/architecture.zh_CN.md" target="_blank" rel="noreferrer"><span class="zh">阅读完整架构文档</span><span class="en">Read the full architecture</span> <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="status-section section-shell" id="status">
+      <div class="section-heading reveal">
+        <div><p class="kicker zh">公开进展，不把“能编译”写成“已验收”</p><p class="kicker en">Public progress, with build and device evidence kept separate</p><h2><span class="zh">现在能做什么，<br>还差哪些实机验收。</span><span class="en">What works now,<br>and what still needs hardware acceptance.</span></h2></div>
+      </div>
+      <div class="status-grid reveal">
+        <article class="status-card done">
+          <div class="status-label"><span class="status-dot"></span><span class="zh">已实现 / 主机验证</span><span class="en">Implemented / host-verified</span></div>
+          <ul>
+            <li class="zh">七页 240×320 布局、中文字形与溢出检查</li><li class="en">Seven-screen 240×320 layout and glyph checks</li>
+            <li class="zh">流式 ADPCM 与每班一条录音</li><li class="en">Streaming ADPCM and one note per class</li>
+            <li class="zh">Flash 事务、旧录音保留和故障注入测试</li><li class="en">Flash transaction and fault-injection tests</li>
+            <li class="zh">Mac 应用自检、伪串口校时与 CSV 上传</li><li class="en">Mac app self-test and pseudo-serial protocol tests</li>
+            <li class="zh">既有固件已刷写并通过启动与 USB 基本检查</li><li class="en">Existing firmware flashed, booted, and passed basic USB checks</li>
+          </ul>
+        </article>
+        <article class="status-card pending">
+          <div class="status-label"><span class="status-dot"></span><span class="zh">仍需实机验收</span><span class="en">Still needs device acceptance</span></div>
+          <ul>
+            <li class="zh">完整录音、试听音质与可懂度</li><li class="en">End-to-end capture and playback quality</li>
+            <li class="zh">录制、提交与银行整理阶段的断电验证</li><li class="en">Power loss during record, commit, and compaction</li>
+            <li class="zh">图形化 Mac 应用按钮的实机端到端验收</li><li class="en">Live-device acceptance for the graphical Mac app</li>
+            <li class="zh">深睡电流、按键唤醒、长时运行与时间漂移</li><li class="en">Sleep current, wake behavior, endurance, and clock drift</li>
+            <li class="zh">备份恢复命令（当前只有备份）</li><li class="en">Restore command (backup is read-only today)</li>
+          </ul>
+        </article>
+      </div>
+      <p class="status-footnote zh">本页面描述的是当前 V1.1 工程状态，不代表已经完成商业产品级认证。</p>
+      <p class="status-footnote en">This page describes the current V1.1 engineering state; it is not a claim of commercial product certification.</p>
+    </section>
+
+    <section class="open-source">
+      <div class="section-shell open-source-inner reveal">
+        <div>
+          <p class="kicker zh">开源，也开放问题</p>
+          <p class="kicker en">Open source, including the unfinished edges</p>
+          <h2><span class="zh">代码、原型、测试和文档，<br>都放在同一个仓库里。</span><span class="en">Firmware, prototype, tests, and docs,<br>kept in one repository.</span></h2>
+          <p class="zh">ClassTrack 采用 MIT 许可证，底层基于 FoloToy 开源 AI Passport BSP。欢迎查看实现、复现测试、提出 Issue 或改进硬件验收方法。</p>
+          <p class="en">ClassTrack is MIT-licensed and built on the open FoloToy AI Passport BSP. Read the implementation, reproduce the tests, open an issue, or improve the hardware acceptance process.</p>
+        </div>
+        <div class="source-actions">
+          <a class="button primary" href="https://github.com/tzcwvccj4w-create/classtrack-passport" target="_blank" rel="noreferrer"><span class="zh">在 GitHub 查看源码</span><span class="en">View source on GitHub</span></a>
+          <a class="button secondary" href="https://github.com/tzcwvccj4w-create/classtrack-passport/issues" target="_blank" rel="noreferrer"><span class="zh">提交 Issue</span><span class="en">Open an issue</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><span class="brand-mark">CT</span><div><strong>ClassTrack</strong><small><span class="zh">课到哪了？</span><span class="en">Where did the class get to?</span></small></div></div>
+    <p><span class="zh">一个 FoloToy AI Passport 社区项目，非 FoloToy 官方产品。</span><span class="en">A community project for FoloToy AI Passport; not an official FoloToy product.</span></p>
+    <p>MIT License · <a href="https://github.com/tzcwvccj4w-create/classtrack-passport" target="_blank" rel="noreferrer">GitHub</a></p>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
