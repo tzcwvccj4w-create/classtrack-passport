@@ -10,7 +10,7 @@
 
 ClassTrack ("Where did the class get to?") is an offline teaching-progress recorder for the ESP32-C3 FoloToy AI Passport. It keeps one latest recording per class, records a timestamp, supports review before replacement, and exchanges time, class CSV data, and backups with a Mac over USB serial.
 
-This independent project is based on the official FoloToy `ai-passport` BSP snapshot downloaded on 2026-10-26. It does not modify or depend on the user's family-education repository.
+This independent project is based on the official FoloToy `ai-passport` BSP snapshot downloaded on 2026-10-26. 
 
 > ClassTrack is a community project for FoloToy AI Passport, not an official FoloToy product.
 
