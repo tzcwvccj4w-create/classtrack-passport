@@ -10,7 +10,6 @@
 
 ClassTrack（课到哪了？）是一款运行在 ESP32-C3 FoloToy AI Passport 上的离线教学进度记录器。每班只保留最近一条录音，保存录制时间，替换前可以试听，并通过 USB 串口与 Mac 交换时间、班级 CSV 和备份数据。
 
-这是一个独立项目，底层基于 2026-10-26 下载的 FoloToy 官方 `ai-passport` BSP 快照，不会修改或依赖用户已有的家庭教育仓库。
 
 > ClassTrack 是 FoloToy AI Passport 社区项目，不是 FoloToy 官方产品。
 
