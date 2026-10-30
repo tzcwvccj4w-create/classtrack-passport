@@ -3,9 +3,9 @@
 # FoloToy AI Passport 版 ClassTrack
 
 <p align="center">
-  <a href="https://classtrack-passport.liaofely.chatgpt.site"><strong>产品介绍与完整使用方法</strong></a> ·
+  <a href="https://tzcwvccj4w-create.github.io/classtrack-passport"><strong>产品介绍与完整使用方法</strong></a> ·
   <a href="https://github.com/tzcwvccj4w-create/classtrack-passport">源码</a> ·
-  <a href="https://classtrack-passport.liaofely.chatgpt.site/downloads/ClassTrack-Manager-macOS.dmg">Mac 管理工具</a>
+  <a href="https://tzcwvccj4w-create.github.io/classtrack-passport/downloads/ClassTrack-Manager-macOS.dmg">Mac 管理工具</a>
 </p>
 
 ClassTrack（课到哪了？）是一款运行在 ESP32-C3 FoloToy AI Passport 上的离线教学进度记录器。每班只保留最近一条录音，保存录制时间，替换前可以试听，并通过 USB 串口与 Mac 交换时间、班级 CSV 和备份数据。
@@ -18,7 +18,7 @@ ClassTrack（课到哪了？）是一款运行在 ESP32-C3 FoloToy AI Passport �
 1. 用上、下键选择班级，按 OK 进入。
 2. 按 OK 开始录音，再按一次结束，单条最长 20 秒。
 3. 试听后选择确认保存、重新录制或放弃修改。
-4. 需要校时或上传课表时，打开 [Mac 管理工具](https://classtrack-passport.liaofely.chatgpt.site/downloads/ClassTrack-Manager-macOS.dmg)；关闭窗口后应用完全退出，不会常驻后台。
+4. 需要校时或上传课表时，打开 [Mac 管理工具](https://tzcwvccj4w-create.github.io/classtrack-passport/downloads/ClassTrack-Manager-macOS.dmg)；关闭窗口后应用完全退出，不会常驻后台。
 
 课表使用 UTF-8 CSV，表头必须为 `id,name,course`：
 
