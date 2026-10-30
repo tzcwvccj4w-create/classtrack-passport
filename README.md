@@ -3,9 +3,9 @@
 # ClassTrack for FoloToy AI Passport
 
 <p align="center">
-  <a href="https://classtrack-passport.liaofely.chatgpt.site"><strong>Product site and complete guide</strong></a> ·
+  <a href="https://tzcwvccj4w-create.github.io/classtrack-passport"><strong>Product site and complete guide</strong></a> ·
   <a href="https://github.com/tzcwvccj4w-create/classtrack-passport">Source</a> ·
-  <a href="https://classtrack-passport.liaofely.chatgpt.site/downloads/ClassTrack-Manager-macOS.dmg">Mac manager</a>
+  <a href="https://tzcwvccj4w-create.github.io/classtrack-passport/downloads/ClassTrack-Manager-macOS.dmg">Mac manager</a>
 </p>
 
 ClassTrack ("Where did the class get to?") is an offline teaching-progress recorder for the ESP32-C3 FoloToy AI Passport. It keeps one latest recording per class, records a timestamp, supports review before replacement, and exchanges time, class CSV data, and backups with a Mac over USB serial.
@@ -19,7 +19,7 @@ This independent project is based on the official FoloToy `ai-passport` BSP snap
 1. Use Up and Down to choose a class, then press OK.
 2. Press OK to start recording and press it again to stop. Each note is limited to 20 seconds.
 3. Review the note, then save, re-record, or discard it.
-4. Open the [Mac manager](https://classtrack-passport.liaofely.chatgpt.site/downloads/ClassTrack-Manager-macOS.dmg) only when you need to sync time or upload the class list. Closing its window exits the app; it does not remain in the background.
+4. Open the [Mac manager](https://tzcwvccj4w-create.github.io/classtrack-passport/downloads/ClassTrack-Manager-macOS.dmg) only when you need to sync time or upload the class list. Closing its window exits the app; it does not remain in the background.
 
 Class lists are UTF-8 CSV files with the exact `id,name,course` header:
 
